@@ -1,0 +1,152 @@
+.footer-basic {
+  padding:40px 0;
+  background-color:lightgray;
+  margin-top:40px;
+  height:180px;
+  font-style:italic;
+}
+
+.footer-basic ul {
+                padding: 0;
+                list-style: none;
+                text-align: center;
+                font-size: 18px;
+                line-height: 1.6;
+                margin-bottom: 0;
+            }
+
+.footer-basic ul li {
+                padding: 0 10px;
+            }
+
+.footer-basic ul a {
+  text-decoration:none;
+  color:black;
+  opacity:0.8;
+}
+.footer-basic .social a {
+                font-size: 24px;
+                color: inherit;
+                padding: 0 10px;
+                transition: color 0.3s;
+            }
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+.social a{
+	color:black;
+	padding:20px;
+	font-size:30px;
+	opacity:0.8;
+	text-decoration:none;
+}
+.fa-brands:hover{
+transform:scale(1.2);
+color:black;
+}
+.head1{
+	background-color:white;
+}
+#mynavbar{
+	margin-left:150px;
+
+}
+.nav-link {
+	font-size:15px;
+	color:Black;
+	margin:5	px;
+}
+h1{
+	color:black;
+	font-family:Chiller;
+	font-size:60px;
+}
+.navbar-nav li a{
+	position:relative;
+	color:gray;
+	padding:20px;
+	display:block;
+	margin-left:10px;
+	margin-top:-10px;
+	font-size:15px;
+	font-family:Tempus Sans ITC;
+	text-decoration:none;
+	
+}
+.navbar-nav li a:hover{
+	color:black;
+}
+.dropdown-content{
+	background-color:#e8eced;
+	position:absolute;	
+	padding:5px;
+	display:none;
+	
+	box-shadow:2px 2px 2px 2px rgba(0,0,0.2);
+	opacity:0.9;
+	list-style-type:none;
+}
+.navbar-nav li:nth-child(5):hover .dropdown-content{
+	display:block;
+}
+li i{
+	padding:8px;
+}
+.nav-item .active{
+	color:red;
+}
+.top-btn{
+	
+	color:white;
+	border-radius:20px;
+	background-color:#c70404;
+	padding:10px;
+	right:0;
+	margin-left:10px;
+	font-size:15px;
+	margin-top:-15px;
+	font-family:cursive;
+}
+#head{
+	font-size:40px;
+	font-family:Cooper Black;
+}
+span{
+	color:red;
+}
+.dropbtn .active, .dropdown-content .active{
+	color:red;
+}
+
+#accountLink{
+	text-transform:uppercase;
+	color:gray;
+}
+#login{
+	font-size:15px;
+	background-color:transparent;
+	border:none;
+	color:gray;
+	
+}
+#login:hover{
+	color:red;
+}
+.dropdown-menu{
+	display:none;
+	background-color:#e8eced;
+	border:none;
+	text-align:center;
+	position:absolute;
+	margin-left:-35px;
+	height:130px;
+	padding:5px;
+	box-shadow:2px 2px 2px 2px rgba(0,0,0.2);
+	opacity:0.9;
+	margin-top:20px;
+	width:10%;
+}
+#accountLink:hover .dropdown-menu{
+	display:block;
+}

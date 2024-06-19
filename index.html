@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link href="header.css" type="text/css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="form.js"></script>
+<style>
+body {
+    width: auto;
+    height: auto;
+}
+
+h1 {
+    color: black;
+    font-family: Chiller;
+    font-size: 60px;
+}
+
+button:hover {
+    opacity: .7;
+}
+
+.body {
+    height: auto;
+    width: 100%;
+    background-color: #eee;
+    margin-top: 20px;
+}
+
+#para {
+    font-size: 50px;
+    font-family: Lucida Handwriting;
+}
+
+#cont {
+    font-size: 30px;
+    font-family: Tempus Sans ITC;
+}
+
+img {
+    height: 500px;
+    width: 100%;
+}
+
+.body .btn-book-tabel {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    color: white;
+    font-family: cursive;
+    border-radius: 20px;
+    background-color: #c70404;
+    font-size: 15px;
+}
+
+.body a {
+    font-size: 20px;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.slide {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 600px;
+}
+
+.bgimg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: fadeInOut 3s;
+}
+
+#content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.bullets {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.bullet.active {
+    background-color: #fff;
+}
+
+#sliderTitle {
+    font-family: Lucida Handwriting;
+    font-size: 50px;
+}
+
+#sliderText {
+    font-family: Tempus Sans ITC;
+    font-size: 20px;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.offer {
+    display: flex;
+    background-color: #eee;
+    border-radius: 50px 0 50px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-height: 300px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.offer img {
+    width: 40%;
+    height: auto;
+    border-radius: 50px 0 50px 0;
+}
+
+.offer-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.offer {
+    color: black;
+}
+
+section h2 {
+    font-family: Lucida Handwriting;
+    font-size: 40px;
+}
+
+section p {
+    font-family: Tempus Sans ITC;
+    font-size: 20px;
+}
+
+@keyframes imageBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.col-lg-5 img {
+    animation: imageBounce 5s infinite;
+}
+
+#offer2 {
+    font-family: Lucida Handwriting;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    .slide {
+        height: 400px;
+    }
+
+    .bgimg {
+        background-size: cover;
+        height: 100%;
+    }
+
+    #content {
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+    }
+
+    .col-lg-5 img {
+        height: auto;
+        width: 100%;
+    }
+
+    .offer img {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    .offer {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .offer-content {
+        padding: 10px;
+    }
+
+    #para {
+        font-size: 30px;
+    }
+
+    #cont {
+        font-size: 20px;
+    }
+
+    .body .btn-book-tabel {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .body a {
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    .offer-content h2 {
+        font-size: 30px;
+    }
+
+    .offer-content p {
+        font-size: 16px;
+    }
+
+    section {
+        max-width: 100%;
+        margin: 10px auto;
+    }
+
+    .bullets {
+        bottom: 5px;
+    }
+
+    .bullet {
+        width: 8px;
+        height: 8px;
+    }
+
+    #sliderTitle {
+        font-size: 30px;
+    }
+
+    #sliderText {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .footer-basic ul {
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+
+    .footer-basic ul li {
+        padding: 0 10px;
+    }
+
+    .footer-basic .social a {
+        font-size: 24px;
+        color: inherit;
+        padding: 0 10px;
+        transition: color 0.3s;
+    }
+}
+@media (max-width: 768px) {
+    .navbar-brand h1 {
+        font-size: 24px;
+    }
+    .navbar-nav .nav-link {
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+<body>
+<header class="head1 sticky-top">
+    <nav class="navbar navbar-expand-sm">
+        <div class="container">
+            <a class="navbar-brand"><h1>YUMMY<span style="color:red;">...</span></h1></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span><i class="fas fa-bars" style="color:Black;"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html"><i class="fa-solid fa-house"></i> HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="fa-solid fa-circle-info"></i> ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fa-solid fa-address-book"></i> CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="accountLink" class="nav-link" href="login.html"><i class="fa-solid fa-user"></i> ACCOUNT</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class=" fa-solid fa-caret-down"></i> MORE
+                        </a>
+                        <ul class="dropdown-content" aria-labelledby="navbarDropdown">
+                            <li><a href="event.html"><i class="fa-solid fa-calendar-days"></i>EVENT</a></li>
+                            <li><a href="gallery.html"><i class="fa-solid fa-images"></i>GALLAERY</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="top-btn" onclick="document.location='tablebook.html'">BOOK A TABLE</button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="slide mt-3">
+    <div class="bgimg" id="slider" style="background-image: url('image.jpg'); animation-name: fadeInOut;"></div>
+    <div id="content">
+        <center>
+            <h3 id="sliderTitle">Welcome to YUMMY...</h3>
+            <p id="sliderText">"Elevate your dining experience at Yummy.<br> Secure your table to enjoy a seamless blend of exquisite flavors,<br> warm ambiance, and impeccable service. Your reservation is the key to a night of culinary delight."</p>
+        </center>
+    </div>
+    <div class="bullets" id="bulletContainer"></div>
+</div>
+
+<div class="body">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-5">
+                <p id="para">Enjoy Your Healthy Delicious Food</p>
+                <p id="cont">A recipe has no soul.<br> You, as the cook, must bring<br> soul to the recipe.</p>
+                <button onclick="document.location='tablebook.html'" class="btn-book-tabel">BOOK A TABLE</button>
+                <a href="https://youtu.be/szvt1vD0Uug?si=OrfoPBvAyODki-KO"><i class="fa-regular fa-circle-play" style="font-size:20px; padding-left:20px; color:red;"></i><span style="font-size:15px; padding-left:10px; font-family:Rockwell; color:Black;">Watch video</span></a>
+            </div>
+            <div class="col-lg-5">
+                <img src="1.png" alt="Delicious Food Image">
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="offersSection">
+    <p id="offer2">OFFERS</p>
+    <div class="offer" id="offer1">
+        <img src="events-2.jpg" alt="Special Weekend Dinner">
+        <div class="offer-content">
+            <h2>Special Weekend Dinner</h2>
+            <p>Enjoy a delightful weekend dinner with our special menu. Exquisite dishes and a cozy atmosphere await you!</p>
+        </div>
+    </div>
+</section>
+
+<div class="footer-basic">
+    <footer>
+        <ul class="list">
+            <li class="list-inline-item"><strong>Our Address</strong><br>No.8, Gandipuram</li>
+            <li class="list-inline-item"><strong>Reservation</strong><br>+91 9698113914</li>
+            <li class="list-inline-item"><strong>Opening Hours</strong><br>Mon-Sun: 8am-10pm</li>
+        </ul>
+        <div class="social">
+            <center>
+                <a href="https://wa.me/919698113914" class="fa-brands fa-whatsapp"></a>
+                <a href="https://www.instagram.com/__w_h_i_t_e___w_o_l_f__" class="fa-brands fa-instagram"></a>
+                <a href="https://www.twitter.com/HARIHARAN0824" class="fa-brands fa-x-twitter"></a>
+            </center>
+        </div>
+    </footer>
+</div>
+
+<script>
+let currentImageIndex = 0;
+const images = ['image.jpg', 'form.jpg', 'bg-3.jpg'];
+const titles = ['Welcome to YUMMY...', 'Discover Culinary Excellence', 'Indulge in Delightful Tastes'];
+const texts = [
+    '"Elevate your dining experience at Yummy.<br> Secure your table to enjoy a seamless blend of exquisite flavors,<br> warm ambiance, and impeccable service. Your reservation is the key to a night of culinary delight."',
+    '"Experience culinary excellence like never before. Our chefs craft dishes that delight the senses and create unforgettable memories. Reserve your table for a journey into taste perfection."',
+    '"Indulge in delightful tastes and a warm ambiance at Yummy. Our commitment to excellence ensures a memorable dining experience. Secure your table for a night filled with culinary wonders."'
+];
+
+function changeSlide(index) {
+    document.getElementById('slider').style.animation = 'none';
+    setTimeout(() => {
+        document.getElementById('slider').style.animation = 'fadeInOut 3s';
+        document.getElementById('slider').style.backgroundImage = `url('${images[index]}')`;
+    }, 50);
+
+    document.getElementById('sliderTitle').innerHTML = titles[index];
+    document.getElementById('sliderText').innerHTML = texts[index];
+
+    const bullets = document.querySelectorAll('.bullet');
+    bullets.forEach((bullet, i) => {
+        if (i === index) {
+            bullet.classList.add('active');
+        } else {
+            bullet.classList.remove('active');
+        }
+    });
+}
+
+function createBullets() {
+    const bulletContainer = document.getElementById('bulletContainer');
+    for (let i = 0; i < images.length; i++) {
+        const bullet = document.createElement('div');
+        bullet.classList.add('bullet');
+        bullet.addEventListener('click', () => changeSlide(i));
+        bulletContainer.appendChild(bullet);
+    }
+}
+
+createBullets();
+setInterval(() => {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    changeSlide(currentImageIndex);
+}, 3000);
+
+const offersData = [
+    {
+        image: 'events-2.jpg',
+        title: 'Special Weekend Dinner',
+        description: 'Enjoy a delightful weekend dinner with our special menu. Exquisite dishes and a cozy atmosphere await you!'
+    },
+    {
+        image: 'combo.jpg',
+        title: 'Lunch Combo Deal',
+        description: 'Grab our lunch combo deal at a special price. Choose from a variety of options to satisfy your taste buds.'
+    }
+];
+
+function updateOffer(offerIndex) {
+    const offer = offersData[offerIndex];
+    const offerElement = document.getElementById('offer1');
+    if (offerElement) {
+        offerElement.style.opacity = 0;
+        offerElement.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+            offerElement.innerHTML = `
+                <img src="${offer.image}" alt="${offer.title}">
+                <div class="offer-content">
+                    <h2>${offer.title}</h2>
+                    <p>${offer.description}</p>
+                </div>
+            `;
+            offerElement.style.opacity = 1;
+            offerElement.style.transform = 'translateY(0)';
+        }, 500);
+    }
+}
+
+let currentOfferIndex = 0;
+updateOffer(currentOfferIndex);
+
+setInterval(() => {
+    currentOfferIndex = (currentOfferIndex + 1) % offersData.length;
+    updateOffer(currentOfferIndex);
+}, 6000);
+</script>
+
+</body>
+</html>
